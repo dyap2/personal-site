@@ -1,0 +1,307 @@
+/* color scheme */
+:root {
+  --background-color: #c97c5d;
+  --main-text-color: #eed7c5;
+  --little-text-color: #eee2df;
+}
+
+@font-face {
+  /* now, refer to the font as serif-font */
+  font-family: "large";
+  src: url("../../assets/site_font/Mada/Mada-Black.ttf");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../../assets/site_font/Sansita/Sansita-Bold.ttf");
+}
+
+@font-face {
+  font-family: "small";
+  src: url("../../assets/site_font/Yantramanav/Yantramanav-Regular.ttf");
+}
+
+body,
+a,
+h1,
+p,
+li,
+footer {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+h1 {
+  font-family: large;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: palevioletred;
+}
+
+h2 {
+  font-family: medium;
+}
+
+nav a {
+  padding: 1px;
+}
+
+nav button {
+  width: 250px;
+  height: 25px;
+  background: none;
+  margin: 2px;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--main-text-color);
+  color: var(--background-color);
+  font-family: small;
+  margin: 20px 20px;
+}
+
+p {
+  font-family: small;
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+label {
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 10px 0;
+}
+
+input,
+textarea,
+button {
+  border-radius: 10px;
+  border: 2px solid #9893d8;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 15px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+footer.copright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px;
+}
+
+.copyright p {
+  text-align: center;
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+}
+
+.social-media li {
+  margin: 10px;
+}
+
+/* mobile */
+#name-sign {
+  font-size: 45px;
+  text-align: center;
+}
+
+.introduction {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.welcome-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  align-content: center;
+  justify-content: center;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* div inside the welcome wrapper, contains the text */
+.welcome-text {
+  /* this spanned 1 before */
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.welcome-image {
+  grid-column: 3/4;
+}
+
+.welcome-image img {
+  margin-top: 5px;
+  max-width: 200px;
+  max-height: 150px;
+  min-width: 169.44px;
+  min-height: 127.08px;
+}
+
+.credly {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: max-content;
+}
+
+/* a single credential */
+.credly iframe {
+  display: flex;
+  align-self: center;
+  margin: 5px 2px;
+}
+
+/* stopped at form formatting */
+form {
+  text-align: center;
+}
+
+label,
+input,
+textarea {
+  display: inline-block;
+  margin: 2px;
+}
+
+/* footer here? */
+
+/* tablet styles */
+@media screen and (min-width: 620px) {
+  .grid {
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 30px; */
+  }
+
+  .welcome-text {
+    grid-column: 1/2;
+    display: flex;
+    justify-self: flex-end;
+  }
+
+  .welcome-image {
+    display: flex;
+    align-items: center;
+  }
+
+  .welcome-img-layout {
+    grid-column: 2/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* this shows, but not aligning the images to the center  */
+  }
+
+  .welcome-img img {
+    max-width: 200%;
+    max-height: 200%;
+
+    max-width: 100%;
+    height: auto;
+  }
+
+  #about-me-title {
+    visibility: visible;
+  }
+
+  #accomplishments {
+    visibility: visible;
+  }
+
+  .credly iframe {
+    max-width: 100%;
+    max-height: auto;
+    margin: 2em;
+  }
+
+  #contact-me {
+    visibility: visible;
+  }
+}
+
+/* laptop */
+@media screen and (min-width: 960px) {
+  #name-sign {
+    font-size: 3em;
+  }
+
+  body {
+    font-size: 1.5em;
+    margin: 1.5em;
+  }
+
+  .grid {
+    height: 300px;
+  }
+
+  .welcome-img-layout {
+    width: max-content;
+    height: max-content;
+  }
+
+  .welcome-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .body-description {
+    margin: auto 100px;
+  }
+
+  .credly iframe {
+    max-height: auto;
+
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+
+  footer {
+    margin: 2px;
+  }
+}

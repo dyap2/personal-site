@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Denise Yap</title>
+  </head>
+  <body>
+    <h1 id="name-sign">Welcome!</h1>
+
+    <p class="introduction">
+      Hello, there! I'm glad you're on my page, please explore my site to get to
+      know more about me, my skills, and the projects that I have worked on.
+    </p>
+
+    <div class="welcome-wrapper">
+      <!-- section for welcome content -->
+      <section class="welcome grid">
+        <div class="welcome-text">
+          <!-- welcome text here -->
+          <!-- <h1>Welcome!</h1> -->
+
+          <!-- navigation -->
+          <nav class="navigation">
+            <ul>
+              <li>
+                <button><a href="../html/index.html">Home</a></button>
+              </li>
+              <li>
+                <button>
+                  <a href="#about-me-title">About</a>
+                </button>
+              </li>
+              <li>
+                <button><a href="#accomplishments">Accomplishments</a></button>
+              </li>
+              <li>
+                <button><a href="#contact-me">Contact</a></button>
+              </li>
+              <li>
+                <button><a href="">Projects</a></button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="welcome-image">
+          <!-- insert image here -->
+          <!-- error since moved the assets around -->
+          <img src="../assets/wfh_1.svg" alt="girl working from home" />
+        </div>
+      </section>
+    </div>
+
+    <!-- about -->
+    <h2 id="about-me-title">About me</h2>
+    <div class="about-me">
+      <p class="body-description">
+        is a recent summa cum laude graduate with a B.S. in Computer Science.
+        She attended California State University, East Bay. During her time as
+        an undergraduate, she participated in volunteerwork that included
+        teaching programming concepts to younger students in the community.
+      </p>
+    </div>
+
+    <!-- accomplishments -->
+    <h2 id="accomplishments">Accomplishments</h2>
+    <div class="credly grid">
+      <div class="welcome-img-layout">
+        <iframe
+          id="1"
+          frameborder="0"
+          scrolling="no"
+          src="https://csueb.credly.com/embed.html#/?member_badge_id=23353462"
+          width="180"
+          height="230"
+        ></iframe>
+
+        <iframe
+          id="2"
+          frameborder="0"
+          scrolling="no"
+          src="https://csueb.credly.com/embed.html#/?member_badge_id=18176200"
+          width="180"
+          height="230"
+        ></iframe>
+
+        <iframe
+          id="3"
+          frameborder="0"
+          scrolling="no"
+          src="https://csueb.credly.com/embed.html#/?member_badge_id=23059902"
+          width="180"
+          height="230"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- form -->
+    <h2 id="contact-me">Contact me</h2>
+    <div class="form">
+      <form method="POST" action="/send-mail">
+        <label for="name" class="txtlabel">name</label>
+
+        <input type="text" id="name" name="name" placeholder="full name" />
+
+        <br />
+
+        <label for="email" class="txtlabel">email</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email address"
+        />
+
+        <br />
+        <label for="message" class="txtlabel">message</label>
+
+        <textarea name="message" id="message"></textarea>
+
+        <br />
+        <button class="submit">Submit!</button>
+      </form>
+    </div>
+
+    <!-- footer used to be grid -->
+    <footer>
+      <div class="copyright">
+        <p>Copyright 2020</p>
+      </div>
+
+      <ul class="social-media">
+        <!-- attach an image and an anchor tag in here -->
+        <li><a href="https://linkedin.com">Linkedin</a></li>
+        <li><a href="https://github.com">Github</a></li>
+        <li><a href="https://medium.com">Medium</a></li>
+      </ul>
+    </footer>
+
+    <script src="../server.js"></script>
+  </body>
+</html>
