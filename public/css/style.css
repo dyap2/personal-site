@@ -1,8 +1,10 @@
 /* color scheme */
 :root {
-  --background-color: #c97c5d;
-  --main-text-color: #eed7c5;
+  --background-color: #d9d4c7;
+  --main-text-color: #807571;
   --little-text-color: #eee2df;
+  --border-color: #1e1b0a;
+  --brighter-white: #f4f4f4;
 }
 
 @font-face {
@@ -42,7 +44,7 @@ li {
 }
 
 a {
-  color: palevioletred;
+  color: var(--little-text-color);
 }
 
 h2 {
@@ -58,12 +60,13 @@ nav button {
   height: 25px;
   background: none;
   margin: 2px;
+  /* box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.44); */
 }
 
 body {
   overflow-x: hidden;
   background: var(--main-text-color);
-  color: var(--background-color);
+  color: var(--brighter-white);
   font-family: small;
   margin: 20px 20px;
 }
@@ -93,7 +96,7 @@ input,
 textarea,
 button {
   border-radius: 10px;
-  border: 2px solid #9893d8;
+  border: 2px solid var(--brighter-white);
 }
 
 footer {
@@ -194,6 +197,7 @@ footer .social-media {
   display: flex;
   align-self: center;
   margin: 5px 2px;
+  box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.44);
 }
 
 /* stopped at form formatting */
