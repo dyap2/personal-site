@@ -7,7 +7,8 @@ const info = require("./info.json");
 const app = express();
 
 // ============== Static folder ================
-app.use(express.static(path.join(__dirname, "/public/")));
+app.use(express.static(path.join(__dirname, "public")));
+// app.use("/public", express.static("public"));
 
 // ============ nunjucks =======================
 nunjucks.configure("views", {
@@ -20,16 +21,20 @@ nunjucks.configure("views", {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//loadingin index
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public/html/index.html"));
+});
+
 // form action
 app.post("/send-mail", (req, res) => {
   // actually creating the transport
   let transporter = nodemailer.createTransport({
     host: info.host,
     port: info.port,
-    // secure: true, // true for 465, false for other ports
     auth: {
-      user: info["from-user"], // generated ethereal user
-      pass: info["from-pw"], // generated ethereal password
+      user: info["from-user"],
+      pass: info["from-pw"],
     },
     tls: {
       rejectUnauthorized: false,
