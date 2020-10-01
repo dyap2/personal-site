@@ -6,22 +6,21 @@ const nunjucks = require("nunjucks");
 const info = require("./info.json");
 const app = express();
 
-// ============== Static folder ================
-app.use(express.static(path.join(__dirname, "public")));
-// app.use("/public", express.static("public"));
 
-// ============ nunjucks =======================
+app.use(express.static(path.join(__dirname, "public")));
+
+
 nunjucks.configure("views", {
   autoescape: true,
   express: app,
   watch: true,
 });
 
-// ======== Body Parser Middleware =============
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//loadingin index
+// index
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/html/index.html"));
 });
@@ -43,12 +42,12 @@ app.post("/send-mail", (req, res) => {
 
   // setting up email data
   let mailOptions = {
-    // *** put these information in a .gitignore file ***
-    from: `Nodemailer contact <${info["from-user"]}>`, // sender address
-    to: info["to-user"], // list of receivers
-    subject: "Node Contact Request", // Subject line
-    text: req.body.message, // plain text body
-    html: `<h1>From: '${req.body.name}' [${req.body.email}]</h1><p>Message: ${req.body.message}</p>`, // html body
+    // *** put the information in a .gitignore file ***
+    from: `Nodemailer contact <${info["from-user"]}>`, 
+    to: info["to-user"], 
+    subject: "Node Contact Request", 
+    text: req.body.message, 
+    html: `<h1>From: '${req.body.name}' [${req.body.email}]</h1><p>Message: ${req.body.message}</p>`, 
   };
 
   // send mail method
