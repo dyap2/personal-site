@@ -99,37 +99,6 @@ button {
   border: 2px solid var(--brighter-white);
 }
 
-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 15px;
-
-  align-items: center;
-  justify-items: center;
-}
-
-footer.copright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px;
-}
-
-.copyright p {
-  text-align: center;
-}
-
-footer .social-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2px;
-}
-
-.social-media li {
-  margin: 10px;
-}
-
 /* mobile */
 #name-sign {
   font-size: 45px;
@@ -200,7 +169,6 @@ footer .social-media {
   box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.44);
 }
 
-/* stopped at form formatting */
 form {
   text-align: center;
 }
@@ -212,7 +180,41 @@ textarea {
   margin: 2px;
 }
 
-/* footer here? */
+footer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.social {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: max-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  padding: 0;
+}
+
+.social a {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  align-self: center;
+  justify-items: center;
+  margin: 10px 2px;
+}
+
+#git,
+#linked {
+  display: inline-block;
+  margin-top: 5px;
+  max-width: 200px;
+  max-height: 150px;
+  min-width: 169.44px;
+  min-height: 127.08px;
+}
 
 /* tablet styles */
 @media screen and (min-width: 620px) {
