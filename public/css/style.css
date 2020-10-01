@@ -10,17 +10,17 @@
 @font-face {
   /* now, refer to the font as serif-font */
   font-family: "large";
-  src: url("../../assets/site_font/Mada/Mada-Black.ttf");
+  src: url("/assets/site_font/Mada/Mada-Black.ttf");
 }
 
 @font-face {
   font-family: "medium";
-  src: url("../../assets/site_font/Sansita/Sansita-Bold.ttf");
+  src: url("/assets/site_font/Sansita/Sansita-Bold.ttf");
 }
 
 @font-face {
   font-family: "small";
-  src: url("../../assets/site_font/Yantramanav/Yantramanav-Regular.ttf");
+  src: url("/assets/site_font/Yantramanav/Yantramanav-Regular.ttf");
 }
 
 body,
