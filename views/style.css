@@ -216,10 +216,7 @@ textarea {
 
 /* tablet styles */
 @media screen and (min-width: 620px) {
-  .grid {
-    /* grid-template-columns: repeat(2, 1fr);
-    gap: 30px; */
-  }
+
 
   .welcome-text {
     grid-column: 1/2;
@@ -309,3 +306,5 @@ textarea {
     margin: 2px;
   }
 }
+
+

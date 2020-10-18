@@ -43,11 +43,11 @@ app.post("/send-mail", (req, res) => {
   // setting up email data
   let mailOptions = {
     // *** put the information in a .gitignore file ***
-    from: `Nodemailer contact <${info["from-user"]}>`, 
-    to: info["to-user"], 
-    subject: "Node Contact Request", 
-    text: req.body.message, 
-    html: `<h1>From: '${req.body.name}' [${req.body.email}]</h1><p>Message: ${req.body.message}</p>`, 
+    from: `Nodemailer contact <${info["from-user"]}>`,
+    to: info["to-user"],
+    subject: "Node Contact Request",
+    text: req.body.message,
+    html: `<h1>From: '${req.body.name}' [${req.body.email}]</h1><p>Message: ${req.body.message}</p>`,
   };
 
   // send mail method
@@ -61,4 +61,5 @@ app.post("/send-mail", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("Server started..."));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log("Server started on port...", port));
