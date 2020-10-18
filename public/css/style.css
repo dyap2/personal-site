@@ -1,11 +1,13 @@
 /* color scheme */
 :root {
-  --background-color: #d9d4c7;
-  --main-text-color: #807571;
-  --little-text-color: #eee2df;
+  --background-color: #1C1C24;
+  --main-text-color: #FFFFFF;
+  --little-text-color: #3E4444;
   --border-color: #1e1b0a;
-  --brighter-white: #f4f4f4;
+  --brighter-white:#560BE9;
 }
+
+
 
 @font-face {
   /* now, refer to the font as serif-font */
@@ -33,6 +35,10 @@ footer {
   padding: 0;
   text-decoration: none;
   color: var(--background-color);
+}
+
+body{
+  padding:5;
 }
 
 h1 {
@@ -96,7 +102,7 @@ input,
 textarea,
 button {
   border-radius: 10px;
-  border: 2px solid var(--brighter-white);
+  border: 2px solid var(--border-color);
 }
 
 /* mobile */
